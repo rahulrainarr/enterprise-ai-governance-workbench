@@ -1,0 +1,28 @@
+default_local_model: qwen2.5:7b
+default_embedding_model: nomic-embed-text
+external_api_enabled: false
+tasks:
+  document_qa:
+    preferred: local
+    fallback: extractive
+  executive_summary:
+    preferred: local
+    fallback: extractive
+  risk_assessment:
+    preferred: local
+    fallback: human_review
+  governance_mapping:
+    preferred: local
+    fallback: human_review
+  technical_architecture:
+    preferred: local
+    fallback: human_review
+  proposal_drafting:
+    preferred: local
+    fallback: block_external_without_consent
+  assessment_analysis:
+    preferred: local
+    fallback: rules
+  code_analysis:
+    preferred: local
+    fallback: rules
